@@ -1,5 +1,59 @@
 //====================================================================================================
 
+.header {
+  background-color: #d3cdcd;
+}
+.header__top {
+	display: flex;
+	justify-content: space-between;
+	background-color: $maincolorElem;
+	font-size: 22px;
+	font-weight: 700;
+	color: #FAFBFC;
+	padding: 8px 0;
+}
+.header__location {
+}
+.header__schedule {
+}
+.header__container {
+}
+.header__row-top {
+}
+.header__logo {
+}
+.logo {
+}
+.header__messengers {
+}
+.header__messengers-phone {
+}
+.messengers-phone {
+}
+.header__messengers-whatsapp {
+}
+.messengers-whatsapp {
+}
+.header__button {
+}
+.button {
+  background-color: $maincolorElem;
+  color: #fff;
+  padding: 16px;
+  border-radius: 150px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: math.div(28 , 24);
+}
+.header__row-bottom {
+}
+.header__nav {
+}
+.header__list {
+}
+.header__item {
+}
+
 //====================================================================================================
 
 //Burger
