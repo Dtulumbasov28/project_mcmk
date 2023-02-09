@@ -1,57 +1,176 @@
 //====================================================================================================
 
-.header {
-  background-color: #d3cdcd;
+.header {    
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  z-index: 10;
+
+  &._header-scroll {
+    position: fixed;
+    top: -200%;
+    transition: top 0.4s;
+  }
+
+  &._header-show {
+    top: 0;
+    transition: top 0.4s;
+  }
+  // .header__location
+
+  &__location {
+    & span {
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+      &::before {
+        content: url("@img/icon-location.svg");
+      }
+    }
+  }
+
+  // .header__schedule
+
+  &__schedule {
+    & span {
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+
+      font-weight: 500;
+      &::before {
+        content: url("@img/icon-schedule.svg");
+      }
+    }
+  }
+
+  // .header__container
+
+  &__container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  // .header__row-top
+
+  &__row-top {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    margin-bottom: 20px;
+  }
+
+  // .header__logo
+
+  &__logo {
+  }
+
+  // .header__messengers
+
+  &__messengers {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin-left: auto;
+  }
+
+  // .header__messengers-phone
+
+  &__messengers-phone {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    font-size: 32px;
+    font-weight: 500;
+    line-height: math.div(39, 32);
+    color: #000;
+
+    & svg {
+      max-height: 33px;
+      max-width: 33px;
+    }
+  }
+
+  // .header__messengers-whatsapp
+
+  &__messengers-whatsapp {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    font-size: 24px;
+    font-weight: 500;
+    line-height: math.div(28, 24);
+    color: #2cc21f;
+
+    & svg {
+      max-height: 28px;
+      max-width: 30px;
+      fill: #2cc21f;
+    }
+  }
+
+  // .header__button
+
+  &__button {
+  }
+
+  // .header__row-bottom
+
+  &__row-bottom {
+  }
+
+  // .header__nav
+
+  &__nav {
+  }
+
+  // .header__list
+
+  &__list {
+    display: flex;
+    column-gap: 18px;
+
+    font-size: 16px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  // .header__item
+
+  &__item {
+  }
 }
-.header__top {
-	display: flex;
-	justify-content: space-between;
-	background-color: $maincolorElem;
-	font-size: 22px;
-	font-weight: 700;
-	color: #FAFBFC;
-	padding: 8px 0;
-}
-.header__location {
-}
-.header__schedule {
-}
-.header__container {
-}
-.header__row-top {
-}
-.header__logo {
+.header-top {
+  background-color: $maincolorElem;
+  padding: 8px 0;
+
+  // .header-top__container
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 22px;
+    font-weight: 700;
+    color: #fafbfc;
+  }
 }
 .logo {
 }
-.header__messengers {
-}
-.header__messengers-phone {
-}
 .messengers-phone {
-}
-.header__messengers-whatsapp {
 }
 .messengers-whatsapp {
 }
-.header__button {
-}
 .button {
   background-color: $maincolorElem;
-  color: #fff;
-  padding: 16px;
   border-radius: 150px;
+  padding: 16px 28px;
+  color: #fff;
   font-size: 24px;
   font-weight: 500;
-  line-height: math.div(28 , 24);
-}
-.header__row-bottom {
-}
-.header__nav {
-}
-.header__list {
-}
-.header__item {
+  line-height: math.div(28, 24);
 }
 
 //====================================================================================================

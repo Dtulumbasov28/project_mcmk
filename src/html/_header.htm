@@ -1,7 +1,13 @@
-<header class="header">
-	<div class="header__top">
-		<a class="header__location" href="#">г .Екатеринбург: ул. 8 Марта, д. 8Д</a>
-		<div class="header__schedule">Работаем круглосуточно</div>
+<header class="header" data-scroll="194" data-scroll-show>
+	<div class="header-top">
+		<div class="header-top__container">
+			<a class="header__location" href="#">
+				<span>г .Екатеринбург: ул. 8 Марта, д. 8Д</span>
+			</a>
+			<div class="header__schedule">
+				<span>Работаем круглосуточно</span>
+			</div>
+		</div>
 	</div>
 	<div class="header__container">
 		<div class="header__row-top">
@@ -9,8 +15,18 @@
 				<img src="@img/logo.svg" alt="#" />
 			</a>
 			<div class="header__messengers">
-				<a class="header__messengers-phone messengers-phone" href="#">8 (800) 551-41-71</a>
-				<a class="header__messengers-whatsapp messengers-whatsapp" href="#">Написать в WhatsApp</a>
+				<a class="header__messengers-phone messengers-phone" href="#">
+					<svg>
+						<use xlink:href="@img/icons/icons.svg#svg-icon-phone"></use>
+					</svg>
+					<span>8 (800) 551-41-71</span>
+				</a>
+				<a class="header__messengers-whatsapp messengers-whatsapp" href="#">
+					<svg>
+						<use xlink:href="@img/icons/icons.svg#svg-icon-whatsapp"></use>
+					</svg>
+					<span>Написать в WhatsApp</span>
+				</a>
 			</div>
 			<button class="header__button button"><span>Заказать звонок</span></button>
 		</div>

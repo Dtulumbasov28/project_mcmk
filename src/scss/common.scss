@@ -1,1 +1,16 @@
 // Заголовки, общие БЄМ блоки и проче...
+
+section {
+  padding: 40px 0;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: math.div(45, 36);
+}
+.breadcrumbs {
+  font-size: 14px;
+  line-height: math.div(16, 14);
+  color: $mainColorTwo;
+}

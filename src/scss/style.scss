@@ -82,6 +82,7 @@ body {
 	// Прижимаем footer
 	> main {
 		flex: 1 1 auto;
+		margin-top: 194px;
 	}
 	// Фикс для слайдеров
 	> * {
@@ -148,3 +149,9 @@ body {
 
 // Подключение стилей отдельных страниц
 @import "home";
+
+
+// Подключение стилей отдельных секций
+@import "sections/main";
+@import "sections/features";
+@import "sections/promotions";
