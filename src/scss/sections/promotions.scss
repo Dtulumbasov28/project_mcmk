@@ -12,6 +12,7 @@
   // .promotions__title
 
   &__title {
+    margin-bottom: 20px;
   }
 
   // .promotions__content
@@ -47,11 +48,37 @@
   // .promotions__slide
 
   &__slide {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 3px solid #717feb;
+    border-radius: 20px;
+    padding: 80px 20px 20px;
+    overflow: hidden;
   }
 
   // .promotions__slide-ribbon
 
   &__slide-ribbon {
+    position: absolute;
+    top: -21px;
+    right: -169px;
+    height: 103px;
+    background: #717feb;
+    transform: rotate(45deg);
+    width: 400px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 2;
+    text-align: center;
+
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    padding: 0 117px 9px;
   }
 
   // .promotions__slide-price
@@ -67,35 +94,59 @@
   // .promotions__slide-name
 
   &__slide-name {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: math.div(35, 30);
+    color: $maincolorElem;
+    margin-bottom: 18px;
   }
 
   // .promotions__slide-desc
 
   &__slide-desc {
+    font-weight: 500;
+    font-size: 16px;
   }
 
   // .promotions__slide-button
 
   &__slide-button {
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+
+    font-size: 16px;
   }
 }
 .swiper {
 }
-.navigation {
+.swiper-navigation {
+  display: flex;
+  justify-content: end;
+  column-gap: 20px;
 }
 .swiper-button {
+  display: flex;
+  align-items: center;
   width: 38px;
   height: 38px;
   background: $maincolorElem;
   border-radius: 50%;
   svg {
+    padding: 8px;
+    display: block;
     width: 38px;
     height: 38px;
+
+    fill: #fff;
   }
 }
 .swiper-button-prev {
 }
 .swiper-button-next {
+  & svg {
+    transform: rotate(180deg);
+  }
 }
 .swiper-wrapper {
 }
