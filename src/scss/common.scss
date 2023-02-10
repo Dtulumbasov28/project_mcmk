@@ -6,7 +6,7 @@ section {
 
 .title {
   text-align: center;
-  
+
   font-size: 36px;
   font-weight: 700;
   line-height: math.div(45, 36);
@@ -15,4 +15,47 @@ section {
   font-size: 14px;
   line-height: math.div(16, 14);
   color: $mainColorTwo;
+}
+
+// swiper
+
+.swiper-navigation {
+  display: flex;
+  justify-content: end;
+  column-gap: 20px;
+}
+.swiper-button {
+  display: flex;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  background: $mainColorElem;
+  border-radius: 50%;
+  svg {
+    padding: 8px;
+    display: block;
+    width: 38px;
+    height: 38px;
+
+    fill: #fff;
+  }
+}
+.swiper-button-prev {
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background: $mainColor;
+    transform: scale(1.6);
+    transition: all 0.2s ease-in-out;
+  }
+}
+.swiper-button-next {
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background: $mainColor;
+    transform: scale(1.6);
+    transition: all 0.2s ease-in-out;
+  }
+  & svg {
+    transform: rotate(180deg);
+  }
 }

@@ -89,7 +89,7 @@
     align-items: center;
     position: relative;
     max-width: 1000px;
-    border: 3px solid $maincolorElem;
+    border: 3px solid $mainColorElem;
     border-radius: 40px;
     margin: -80px auto 0 auto;
     padding: 20px 30px 20px 30px;
@@ -164,7 +164,7 @@
 
   &__input {
     padding: 14px 25px 14px 60px;
-    border: 2px solid $maincolorElem;
+    border: 2px solid $mainColorElem;
     border-radius: 50px;
 
     font-weight: 700;
@@ -205,7 +205,7 @@
     height: 18px;
 
     &:checked + .main-form__label-checkbox::before {
-      border-color: $maincolorElem;
+      border-color: $mainColorElem;
       background-color: #a071eb;
       background-image: url("@img/icon-checkbox.svg");
       background-size: 90%;
@@ -225,7 +225,7 @@
       display: inline-block;
       width: 18px;
       height: 18px;
-      border: 2px solid $maincolorElem;
+      border: 2px solid $mainColorElem;
       border-radius: 4px;
       background-repeat: no-repeat;
       background-position: center center;
