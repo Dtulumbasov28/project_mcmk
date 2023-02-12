@@ -1,0 +1,145 @@
+.services {
+  background-color: #fffbf3;
+
+  // .services__container
+
+  &__container {
+  }
+
+  // .services__title
+
+  &__title {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  // .services__body
+
+  &__body {
+    display: flex;
+    column-gap: 20px;
+  }
+
+  // .services__col-text
+
+  &__col-text {
+    width: 60%;
+    padding: 30px 26px;
+    border: 2px solid rgba(109, 110, 118, 0.1);
+    border-radius: 20px;
+    box-shadow: 0px 1px 10px 0px #0000001a;
+  }
+
+  // .services__img
+
+  &__img {
+    margin-bottom: 20px;
+    max-height: 350px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: calc(100% - 16px);
+      height: calc(100% - 16px);
+      border: 3px solid #71bceb;
+      border-radius: 20px;
+      bottom: 8px;
+      left: 8px;
+    }
+    & img {
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+  }
+
+  // .services__content
+
+  &__content {
+  }
+
+  // .services__content-item
+
+  &__content-item {
+  }
+
+  // .services__heading
+
+  &__heading {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: math.div(48, 32);
+
+    margin-bottom: 20px;
+  }
+
+  // .services__text
+
+  &__text {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: math.div(28, 18);
+    color: $mainColorTwo;
+
+    margin-bottom: 20px;
+  }
+
+  // .services__button
+  &__button {
+    border-radius: 20px;
+    padding: 16px 50px;
+  }
+
+  // .services__col-contents
+
+  &__col-contents {
+    width: 40%;
+    height: 100%;
+    //  border: 2px solid rgba(109, 110, 118, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .services__tab
+
+  &__tab {
+    text-align: left;
+    padding: 70px 0 60px 30px;
+    border: 2px solid rgba(109, 110, 118, 0.1);
+
+    &:not(:last-child) {
+      border-bottom: none;
+    }
+    &._tab-active {
+      color: #fff;
+      background-color: rgba(113, 127, 235, 0.5);
+		border: 2px solid rgba(113, 127, 235, 0.1);
+
+
+      & .services__slogan {
+        color: $mainColor;
+      }
+    }
+  }
+  // .services__headline
+
+  &__headline {
+    font-size: 32px;
+    font-weight: 700;
+
+    margin-bottom: 10px;
+  }
+
+  // .services__slogan
+
+  &__slogan {
+    font-size: 16px;
+    font-weight: 500;
+    color: $mainColorThree;
+    line-height: math.div(20, 16);
+  }
+}

@@ -18,6 +18,7 @@
   // .promotions__content
 
   &__content {
+	padding: 14px;
   }
 
   // .promotions__navigation
@@ -42,9 +43,9 @@
   &__button-next {
   }
 
-  // .promotions__content-wrapper
+  // .promotions__content-wrap
 
-  &__content-wrapper {
+  &__content-wrap {
   }
 
   // .promotions__slide
@@ -60,6 +61,7 @@
     border-radius: 20px;
     padding: 85px 35px 20px;
     overflow: hidden;
+    box-shadow: 0px 4px 10px 0px #00000029;
   }
 
   // .promotions__slide-ribbon

@@ -115,7 +115,7 @@
 
   &__contents-body {
     border-top: 3px solid;
-    border-image: linear-gradient(to right, #a071eb 0% 20%, $mainColor 20% 80%);
+    border-image: linear-gradient(to right, $mainColorThree 0% 20%, $mainColor 20% 80%);
     border-image-slice: 1;
     padding: 36px 0 0 0;
   }
@@ -175,9 +175,7 @@
   // .article__block-text
 
   &__block-text {
-    font-weight: 500;
-    line-height: math.div(28, 18);
-    color: $mainColorTwo;
+
   }
 
   // .article__title

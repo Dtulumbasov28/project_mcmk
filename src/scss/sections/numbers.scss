@@ -1,0 +1,76 @@
+.numbers {
+  background-color: #fffbf3;
+
+  // .numbers__container
+
+  &__container {
+  }
+
+  // .numbers__body
+
+  &__body {
+    border: 10px solid rgba(113, 127, 235, 0.5);
+    padding: 40px 100px;
+
+    border-radius: 50px;
+  }
+
+  // .numbers__title
+
+  &__title {
+    text-align: left;
+    margin-bottom: 30px;
+
+	 font-size: 48px;
+  }
+
+  // .numbers__content
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 38px 170px;
+  }
+
+  // .numbers__item
+
+  &__item {
+    max-width: 320px;
+    &:nth-child(1) {
+      & .numbers__heading {
+        color: #71bceb;
+      }
+    }
+    &:nth-child(2) {
+      & .numbers__heading {
+        -webkit-text-stroke: 1px $mainColorElem;
+      }
+    }
+    &:nth-child(3) {
+      & .numbers__heading {
+        -webkit-text-stroke: 1px $mainColorElem;
+      }
+    }
+    &:nth-child(4) {
+      & .numbers__heading {
+        color: $mainColorElem;
+      }
+    }
+  }
+
+  // .numbers__heading
+
+  &__heading {
+    font-size: 64px;
+    font-weight: 700;
+    color: transparent;
+  }
+
+  // .numbers__desc
+
+  &__desc {
+    font-size: 32px;
+    font-weight: 700;
+    color: $mainColorTwo;
+  }
+}

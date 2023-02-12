@@ -11,12 +11,22 @@ section {
   font-weight: 700;
   line-height: math.div(45, 36);
 }
+.subtitle {
+  font-size: 26px;
+  line-height: math.div(32, 26);
+  color: $mainColorThree;
+  text-align: center;
+}
 .breadcrumbs {
   font-size: 14px;
   line-height: math.div(16, 14);
   color: $mainColorTwo;
 }
-
+.block-text {
+  font-weight: 500;
+  line-height: math.div(28, 18);
+  color: $mainColorTwo;
+}
 // swiper
 
 .swiper-navigation {

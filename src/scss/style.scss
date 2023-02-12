@@ -26,6 +26,7 @@ $fontSize: rem(18); // где 14(px) - размер шрифта по умолч
 // Основные цвета
 $mainColor: #2E2E2E; // Цвет шрифта по умолчанию
 $mainColorTwo: #52575C; // Цвет шрифта по умолчанию №2
+$mainColorThree: #A071EB; // Цвет шрифта по умолчанию №2
 $mainColorElem: #717FEB; // Цвет элементов' по умолчанию
 
 // Настройки адаптивной сетки ===============================================================================================================================================================================================================================================================================================
@@ -156,3 +157,13 @@ body {
 @import "sections/features";
 @import "sections/promotions";
 @import "sections/article";
+@import "sections/complex-approach";
+@import "sections/text";
+@import "sections/services";
+@import "sections/stages";
+@import "sections/numbers";
+@import "sections/photos";
+@import "sections/reviews";
+@import "sections/video-reviews";
+@import "sections/center";
+@import "sections/seek-treatment";
