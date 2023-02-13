@@ -25,30 +25,29 @@ import "../../scss/base/swiper.scss";
 
 // Инициализация слайдеров
 function initSliders() {
-	// Перечень слайдеров
-	// Проверяем, есть ли слайдер на стронице
-	var promotionsSlider = new Swiper(".promotions__content", {
-		// Указываем скласс нужного слайдера
-		// Подключаем модули слайдера
-		// для конкретного случая
-		modules: [Navigation],
-		loop: true,
-		observer: true,
-		spaceBetween: 60,
+  // Перечень слайдеров
+  // Проверяем, есть ли слайдер на стронице
+  var promotionsSlider = new Swiper(".promotions__content", {
+    // Указываем скласс нужного слайдера
+    // Подключаем модули слайдера
+    // для конкретного случая
+    modules: [Navigation],
+    loop: true,
+    observer: true,
+    spaceBetween: 60,
 
-		observeParents: true,
-		slidesPerView: 3,
-		speed: 800,
-		slideToClickedSlide: true,
-		centerInsufficientSlides: true,
+    observeParents: true,
+    slidesPerView: 3,
+    speed: 800,
+    slideToClickedSlide: true,
+    centerInsufficientSlides: true,
 
+    //touchRatio: 0,
+    //simulateTouch: false,
+    //preloadImages: false,
+    //lazy: true,
 
-		//touchRatio: 0,
-		//simulateTouch: false,
-		//preloadImages: false,
-		//lazy: true,
-
-		/*
+    /*
 			// Эффекты
 			effect: 'fade',
 			autoplay: {
@@ -57,30 +56,30 @@ function initSliders() {
 			},
 			*/
 
-		// Пагинация
-		/*
+    // Пагинация
+    /*
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true,
 			},
 			*/
 
-		// Скроллбар
-		/*
+    // Скроллбар
+    /*
 			scrollbar: {
 				el: '.swiper-scrollbar',
 				draggable: true,
 			},
 			*/
 
-		// Кнопки "влево/вправо"
-		navigation: {
-			prevEl: ".promotions__button-prev",
-			nextEl: ".promotions__button-next",
-		},
+    // Кнопки "влево/вправо"
+    navigation: {
+      prevEl: ".promotions__button-prev",
+      nextEl: ".promotions__button-next",
+    },
 
-		// Брейкпоинты
-		/*
+    // Брейкпоинты
+    /*
 			breakpoints: {
 				320: {
 					slidesPerView: 1,
@@ -101,98 +100,121 @@ function initSliders() {
 				},
 			},
 			*/
-		// События
-		on: {},
-	});
+    // События
+    on: {},
+  });
 
-	var photoThumbSlide = new Swiper(".photos__thumb", {
-		modules: [Navigation],
-		loop: true,
-		slidesPerView: 5,
-		speed: 800,
-		centerInsufficientSlides: true,
-	});
+  var photoThumbSlide = new Swiper(".photos__thumb", {
+    modules: [Navigation],
+    loop: true,
+    slidesPerView: 5,
+    speed: 800,
+    centerInsufficientSlides: true,
+  });
 
-	var photoSlide = new Swiper(".photos__col-img", {
+  var photoSlide = new Swiper(".photos__col-img", {
+    modules: [Navigation, Thumbs],
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    speed: 800,
 
-		modules: [Navigation, Thumbs],
-		loop: true,
-		slidesPerView: 1,
-		spaceBetween: 20,
-		speed: 800,
+    // Кнопки "влево/вправо"
+    navigation: {
+      prevEl: ".photos__button-prev",
+      nextEl: ".photos__button-next",
+    },
 
-		// Кнопки "влево/вправо"
-		navigation: {
-			prevEl: ".photos__button-prev",
-			nextEl: ".photos__button-next",
-		},
+    thumbs: {
+      swiper: photoThumbSlide,
+    },
+  });
+  var reviewSlide = new Swiper(".reviews__content", {
+    modules: [Navigation],
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 70,
+    speed: 800,
 
-		thumbs: {
-			swiper: photoThumbSlide,
-		},
-	});
-	var reviewSlide = new Swiper(".reviews__content", {
+    // Кнопки "влево/вправо"
+    navigation: {
+      prevEl: ".reviews__button-prev",
+      nextEl: ".reviews__button-next",
+    },
+  });
+  var videoReviewSlide = new Swiper(".video-reviews__content", {
+    modules: [Navigation],
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 22,
+    speed: 800,
 
-		modules: [Navigation],
-		loop: true,
-		slidesPerView: 3,
-		spaceBetween: 70,
-		speed: 800,
+    // Кнопки "влево/вправо"
+    navigation: {
+      prevEl: ".video-reviews__button-prev",
+      nextEl: ".video-reviews__button-next",
+    },
+  });
+  var employeesSlide = new Swiper(".employees__body", {
+    modules: [Navigation],
+    loop: true,
+    slidesPerView: 4,
+    spaceBetween: 32,
+    speed: 800,
 
-		// Кнопки "влево/вправо"
-		navigation: {
-			prevEl: ".reviews__button-prev",
-			nextEl: ".reviews__button-next",
-		},
-	});
-	var videoReviewSlide = new Swiper(".video-reviews__content", {
+    // Кнопки "влево/вправо"
+    navigation: {
+      prevEl: ".employees__button-prev",
+      nextEl: ".employees__button-next",
+    },
+  });
+  var citiesSlide = new Swiper(".cities__body", {
+    modules: [Navigation],
+    loop: true,
+    slidesPerView: 4,
+    spaceBetween: 40,
+    speed: 800,
 
-		modules: [Navigation],
-		loop: true,
-		slidesPerView: 3,
-		spaceBetween: 22,
-		speed: 800,
-
-		// Кнопки "влево/вправо"
-		navigation: {
-			prevEl: ".video-reviews__button-prev",
-			nextEl: ".video-reviews__button-next",
-		},
-	});
+    // Кнопки "влево/вправо"
+    navigation: {
+      prevEl: ".cities__button-prev",
+      nextEl: ".cities__button-next",
+    },
+  });
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 function initSlidersScroll() {
-	let sliderScrollItems = document.querySelectorAll(".swiper_scroll");
-	if (sliderScrollItems.length > 0) {
-		for (let index = 0; index < sliderScrollItems.length; index++) {
-			const sliderScrollItem = sliderScrollItems[index];
-			const sliderScrollBar =
-				sliderScrollItem.querySelector(".swiper-scrollbar");
-			const sliderScroll = new Swiper(sliderScrollItem, {
-				observer: true,
-				observeParents: true,
-				direction: "vertical",
-				slidesPerView: "auto",
-				freeMode: {
-					enabled: true,
-				},
-				scrollbar: {
-					el: sliderScrollBar,
-					draggable: true,
-					snapOnRelease: false,
-				},
-				mousewheel: {
-					releaseOnEdges: true,
-				},
-			});
-			sliderScroll.scrollbar.updateSize();
-		}
-	}
+  let sliderScrollItems = document.querySelectorAll(".swiper_scroll");
+  if (sliderScrollItems.length > 0) {
+    for (let index = 0; index < sliderScrollItems.length; index++) {
+      const sliderScrollItem = sliderScrollItems[index];
+      const sliderScrollBar =
+        sliderScrollItem.querySelector(".swiper-scrollbar");
+      const sliderScroll = new Swiper(sliderScrollItem, {
+        observer: true,
+        observeParents: true,
+        direction: "vertical",
+        slidesPerView: "auto",
+        freeMode: {
+          enabled: true,
+        },
+        scrollbar: {
+          el: sliderScrollBar,
+          draggable: true,
+          snapOnRelease: false,
+        },
+        mousewheel: {
+          releaseOnEdges: true,
+        },
+      });
+      sliderScroll.scrollbar.updateSize();
+    }
+  }
 }
 
 window.addEventListener("load", function (e) {
-	// Запуск инициализации слайдеров
-	initSliders();
-	// Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
-	//initSlidersScroll();
+  // Запуск инициализации слайдеров
+  initSliders();
+  // Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
+  //initSlidersScroll();
 });

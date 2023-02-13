@@ -1,21 +1,11 @@
 //====================================================================================================
 
 .header {    
-  position: absolute;
+  position: fixed;
   width: 100%;
   background-color: #fff;
   z-index: 10;
 
-  &._header-scroll {
-    position: fixed;
-    top: -200%;
-    transition: top 0.4s;
-  }
-
-  &._header-show {
-    top: 0;
-    transition: top 0.4s;
-  }
   // .header__location
 
   &__location {

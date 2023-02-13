@@ -163,26 +163,7 @@
   // .main-form__input
 
   &__input {
-    padding: 14px 25px 14px 60px;
-    border: 2px solid $mainColorElem;
-    border-radius: 50px;
 
-    font-weight: 700;
-    color: $mainColorTwo;
-
-    background: url("@img/placeholder-name.svg") no-repeat;
-    background-size: 30px 30px;
-    background-position: 20px 50%;
-    transition: all 0.3s;
-
-    &:focus {
-      background-position: -200px 50%;
-      transition: all 0.3s;
-
-      &::placeholder {
-        opacity: 0;
-      }
-    }
   }
 
   // .main-form__button
@@ -232,9 +213,4 @@
       background-size: 50% 50%;
     }
   }
-}
-.input-tel {
-  background: url("@img/placeholder-phone.svg") no-repeat;
-  background-size: 20px 20px;
-  background-position: 20px 50%;
 }

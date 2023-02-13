@@ -69,3 +69,36 @@ section {
     transform: rotate(180deg);
   }
 }
+
+.form-input {
+  padding: 14px 25px 14px 60px;
+  border: 2px solid $mainColorElem;
+  border-radius: 50px;
+
+  font-weight: 700;
+  color: $mainColorTwo;
+
+  transition: all 0.3s;
+
+  &:focus {
+    &::placeholder {
+      transition: all 0.3s;
+      opacity: 0;
+    }
+  }
+}
+.input-name {
+  background: url("@img/placeholder-name.svg") no-repeat;
+  background-size: 30px 30px;
+  background-position: 20px 50%;
+}
+.input-tel {
+  background: url("@img/placeholder-phone.svg") no-repeat;
+  background-size: 20px 20px;
+  background-position: 20px 50%;
+}
+.input-desc {
+  background: url("@img/placeholder-desc.svg") no-repeat;
+  background-size: 20px 20px;
+  background-position: 20px 50%;
+}
