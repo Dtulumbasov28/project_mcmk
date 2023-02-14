@@ -1,0 +1,479 @@
+.clinics {
+  // .clinics__container
+
+  &__container {
+  }
+
+  // .clinics__body
+
+  &__body {
+    display: flex;
+    column-gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  // .clinics__col-left
+
+  &__col-left {
+    width: 70%;
+  }
+
+  // .clinics__list
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+  }
+
+  // .clinics__item
+
+  &__item {
+  }
+
+  // .clinics__col-right
+
+  &__col-right {
+    width: 30%;
+  }
+
+  // .clinics__popular
+
+  &__popular {
+  }
+
+  // .clinics__popular-list
+
+  &__popular-list {
+  }
+
+  // .clinics__popular-item
+
+  &__popular-item {
+  }
+
+  // .clinics__popular-preview
+
+  &__popular-preview {
+  }
+
+  // .clinics__popular-heading
+
+  &__popular-heading {
+  }
+
+  // .clinics__popular-desc
+
+  &__popular-desc {
+  }
+
+  // .clinics__form
+
+  &__form {
+    background-color: #71bceb;
+  }
+
+  // .clinics__form-heading
+
+  &__form-heading {
+    color: #363636;
+  }
+
+  // .clinics__form-desc
+
+  &__form-desc {
+    font-size: 16px !important;
+    font-weight: 700;
+    line-height: math.div(19, 16);
+    color: #363636;
+
+    margin-bottom: 14px;
+  }
+
+  // .clinics__row-form
+
+  &__row-form {
+  }
+
+  // .clinics__cities
+
+  &__cities {
+  }
+
+  // .clinics__cities-heading
+
+  &__cities-heading {
+  }
+
+  // .clinics__cities-list
+
+  &__cities-list {
+    display: flex;
+    flex-direction: unset !important;
+    column-gap: 4px;
+    row-gap: 4px !important;
+    flex-wrap: wrap;
+  }
+
+  // .clinics__cities-item
+
+  &__cities-item {
+    font-size: 14px;
+    color: #868383;
+    border: 1px solid #868383;
+    border-radius: 30px;
+  }
+  // .clinics__cities-link
+
+  &__cities-link {
+    border-radius: 30px;
+    padding: 4px 8px;
+  }
+
+  // .clinics__articles
+
+  &__articles {
+  }
+
+  // .clinics__articles-list
+
+  &__articles-list {
+  }
+
+  // .clinics__articles-item
+
+  &__articles-item {
+  }
+
+  // .clinics__articles-preview
+
+  &__articles-preview {
+  }
+
+  // .clinics__articles-heading
+
+  &__articles-heading {
+  }
+
+  // .clinics__articles-desc
+
+  &__articles-desc {
+  }
+
+  // .clinics__navigation
+
+  &__navigation {
+  }
+
+  // .clinics__navigation-list
+
+  &__navigation-list {
+    font-size: 24px;
+    font-weight: 500;
+
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+  }
+
+  // .clinics__navigation-prev
+
+  &__navigation-prev {
+  }
+
+  // .clinics__navigation-item
+
+  &__navigation-item {
+  }
+
+  // .clinics__navigation-next
+
+  &__navigation-next {
+    & a {
+      display: block;
+      background-image: url(@img/next.svg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      width: 25px;
+      height: 25px;
+    }
+  }
+}
+.clinic-item {
+  display: flex;
+  align-items: center;
+  column-gap: 22px;
+
+  border: 3px solid #717feb;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 24px 10px 24px 24px;
+
+  // .clinic-item__img
+
+  &__img {
+    min-width: 310px;
+    min-height: 280px;
+    border-radius: 20px;
+    overflow: hidden;
+    flex-shrink: 0;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  // .clinic-item__text
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .clinic-item__heading
+
+  &__heading {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: math.div(23, 20);
+
+    margin-bottom: 14px;
+  }
+
+  // .clinic-item__terms
+
+  &__terms {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: math.div(23, 20);
+    color: $mainColorElem;
+
+    padding-top: 2px;
+    border-bottom: 2px solid #717feb;
+    margin-bottom: 20px;
+  }
+
+  // .clinic-item__terms-list
+
+  &__terms-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 6px;
+    row-gap: 6px;
+    color: $mainColorElem;
+
+    margin-bottom: 14px;
+  }
+
+  // .clinic-item__terms-item
+
+  &__terms-item {
+    font-size: 16px;
+    font-weight: 500;
+
+    padding: 4px;
+    border: 1px solid #a071eb;
+    border-radius: 10px;
+  }
+  // .clinic-item__terms-link
+
+  &__terms-link {
+  }
+
+  // .clinic-item__desc
+
+  &__desc {
+    font-weight: 500;
+    line-height: math.div(28, 18);
+    color: $mainColorTwo;
+
+    margin-bottom: 10px;
+  }
+
+  // .clinic-item__button
+
+  &__button {
+    font-size: 16px;
+
+    border-radius: 10px;
+    margin-left: auto;
+    padding: 10px 30px;
+  }
+}
+
+.sidebar-block {
+  padding: 22px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px 0px #00000029;
+  // .sidebar-block__heading
+
+  &__heading {
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  // .sidebar-block__list
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  // .sidebar-block__item
+
+  &__item {
+  }
+  // .sidebar-block__link
+
+  &__link {
+    display: flex;
+    column-gap: 10px;
+  }
+
+  // .sidebar-block__desc
+
+  &__desc {
+  }
+
+  // .sidebar-block__preview
+
+  &__preview {
+    width: 100px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  // .sidebar-block__text
+
+  &__text {
+  }
+
+  // .sidebar-block__headline
+
+  &__headline {
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  // .sidebar-block__desc
+
+  &__desc {
+    font-size: 12px;
+  }
+}
+.clinics {
+  // .clinics__popular
+
+  &__popular {
+  }
+
+  // .clinics__popular-list
+
+  &__popular-list {
+  }
+
+  // .clinics__popular-item
+
+  &__popular-item {
+  }
+
+  // .clinics__popular-preview
+
+  &__popular-preview {
+  }
+
+  // .clinics__text
+
+  &__text {
+  }
+
+  // .clinics__popular-heading
+
+  &__popular-heading {
+  }
+
+  // .clinics__popular-desc
+
+  &__popular-desc {
+  }
+}
+
+.clinics-form {
+  display: flex;
+  flex-direction: column;
+  // .clinics-form__row-top
+
+  &__row-top {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  // .clinics-form__input-group
+
+  &__input-group {
+  }
+
+  // .clinics-form__input
+
+  &__input {
+    font-size: 12px;
+
+    padding: 10px 25px 10px 60px;
+    border: unset;
+    background-color: #fff;
+    border-radius: 20px;
+    width: 100%;
+  }
+
+  // .clinics-form__row-bottom
+
+  &__row-bottom {
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+
+  // .clinics-form__input-checkbox
+
+  &__input-checkbox {
+  }
+
+  // .clinics-form__label-checkbox
+
+  &__label-checkbox {
+  }
+
+  // .clinics-form__button
+
+  &__button {
+    font-size: 14px;
+    font-weight: 700;
+    color: #a071eb;
+    text-transform: uppercase;
+
+    background-color: #fff;
+    padding: 12px 26px;
+    margin: 0 auto;
+  }
+}
+.form-input {
+}
+.input-name {
+}
+.input-tel {
+}
+.input-checkbox {
+}
+.label-checkbox {
+}

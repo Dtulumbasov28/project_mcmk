@@ -1,9 +1,17 @@
 // Заголовки, общие БЄМ блоки и проче...
+.logo {
+  max-width: 260px;
+  max-height: 90px;
+  display: block;
 
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+}
 section {
   padding: 40px 0;
 }
-
 .title {
   text-align: center;
 
@@ -33,6 +41,8 @@ section {
   display: flex;
   justify-content: end;
   column-gap: 20px;
+  padding: 13px 13px 0 0;
+  margin-bottom: 30px;
 }
 .swiper-button {
   display: flex;
@@ -77,6 +87,7 @@ section {
 
   font-weight: 700;
   color: $mainColorTwo;
+  outline: none;
 
   transition: all 0.3s;
 
@@ -101,4 +112,40 @@ section {
   background: url("@img/placeholder-desc.svg") no-repeat;
   background-size: 20px 20px;
   background-position: 20px 50%;
+}
+
+.input-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+
+  &:checked + .label-checkbox::before {
+    border-color: $mainColorElem;
+    background-color: #a071eb;
+    background-image: url("@img/icon-checkbox.svg");
+    background-size: 90%;
+  }
+  &:disabled + .label-checkbox::before {
+    background-color: #e9ecef;
+  }
+}
+.label-checkbox {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 5px;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid $mainColorElem;
+    border-radius: 4px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    flex-shrink: 0;
+  }
 }

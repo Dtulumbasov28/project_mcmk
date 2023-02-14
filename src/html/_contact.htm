@@ -12,7 +12,7 @@
                 <form class="contact__form contact-form" action="#" method="#">
                     <div class="contact-form__row-top">
                         <div class="contact-form__input-group">
-                            <input class="contact-form__input form-input input-name" placeholder="Имя" required="" type="text" name="name"
+                            <input class="contact-form__input form-input input-name" placeholder="Введите свое имя" required="" type="text" name="name"
                                 autocomplete="off" onkeyup="this.value = this.value.replace(/[a-z0-9+= ]/gi,'');">
                         </div>
                         <div class="contact-form__input-group">
@@ -23,13 +23,11 @@
                             <input class="contact-form__input form-input input-desc" placeholder="Дополнительное сообщение" required=""
                                 type="text" name="desc" autocomplete="off">
                         </div>
+                        <div class="contact-form__row-bottom">
+                            <input type="checkbox" class="contact-form__input-checkbox input-checkbox">
+                            <label class="contact-form__label-checkbox label-checkbox" for="contact-form__input-checkbox">Политика конфиденциальности</label>
+                        </div>
                         <input class="contact-form__button button" type="submit" value="Отправить"></input>
-                    </div>
-                    <div class="contact-form__row-bottom">
-                        <input type="checkbox" class="contact-form__input-checkbox">
-                        <label class="contact-form__label-checkbox" for="contact-form__input-checkbox">Нажимая на
-                            кнопку, вы
-                            соглашаетесь с условиями обработки персональных данных</label>
                     </div>
                 </form>
             </div>

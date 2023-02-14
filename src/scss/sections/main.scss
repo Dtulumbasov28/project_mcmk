@@ -163,7 +163,6 @@
   // .main-form__input
 
   &__input {
-
   }
 
   // .main-form__button
@@ -178,39 +177,5 @@
     align-items: center;
   }
 
-  // main-form__input-checkbox
-  &__input-checkbox {
-    position: absolute;
-    opacity: 0;
-    width: 18px;
-    height: 18px;
 
-    &:checked + .main-form__label-checkbox::before {
-      border-color: $mainColorElem;
-      background-color: #a071eb;
-      background-image: url("@img/icon-checkbox.svg");
-      background-size: 90%;
-    }
-    &:disabled + .main-form__label-checkbox::before {
-      background-color: #e9ecef;
-    }
-  }
-  // .main-form__label-checkbox
-  &__label-checkbox {
-    display: inline-flex;
-    align-items: center;
-    column-gap: 5px;
-
-    &::before {
-      content: "";
-      display: inline-block;
-      width: 18px;
-      height: 18px;
-      border: 2px solid $mainColorElem;
-      border-radius: 4px;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: 50% 50%;
-    }
-  }
 }
