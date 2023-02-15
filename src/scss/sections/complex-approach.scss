@@ -29,17 +29,54 @@
     position: relative;
     display: flex;
     justify-content: center;
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   // .complex-approach__img
 
   &__img {
     position: relative;
+
+    @media (max-width: $pc) {
+      transform: scale(0.65);
+    }
+    @media (max-width: $tablet) {
+      transform: unset;
+      width: 300px;
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+    }
   }
 
+  // .complex-approach__slider
+
+  &__slider {
+    max-width: 100%;
+  }
+  // .complex-approach__navigation
+
+  &__navigation {
+    display: none;
+
+    @media (max-width: $tablet) {
+      display: flex;
+    }
+  }
   // .complex-approach__list
 
   &__list {
+    position: unset !important;
+
+    @media (max-width: $tablet) {
+      position: relative !important;
+    }
   }
 
   // .complex-approach__item
@@ -51,26 +88,56 @@
     &:nth-child(1) {
       bottom: 100px;
       left: 0;
+
+      @media (max-width: $pc) {
+        left: 30px;
+      }
     }
     &:nth-child(2) {
       bottom: 330px;
       left: -36px;
+
+      @media (max-width: $pc) {
+        left: 10px;
+      }
     }
     &:nth-child(3) {
-      bottom: 560px;
+      bottom: 520px;
       left: 70px;
+      @media (max-width: $pc) {
+        left: 50px;
+      }
     }
     &:nth-child(4) {
-      bottom: 560px;
+      bottom: 520px;
       right: 115px;
+      @media (max-width: $pc) {
+        right: 78px;
+      }
     }
     &:nth-child(5) {
       bottom: 330px;
       right: -36px;
+
+      @media (max-width: $pc) {
+        right: -16px;
+      }
     }
     &:nth-child(6) {
       bottom: 100px;
       right: 0;
+      @media (max-width: $pc) {
+        right: 0px;
+      }
+    }
+
+    @media (max-width: $tablet) {
+      max-width: 100%;
+      position: relative !important;
+      right: unset !important;
+      bottom: unset !important;
+      left: unset !important;
+      padding: 0 20px;
     }
   }
 
@@ -84,6 +151,10 @@
     border-left: 3px solid #71bceb;
     padding: 0px 0 0px 15px;
     margin: 0 0 10px -20px;
+
+    @media (max-width: $mobileSmall) {
+      font-size: 20px;
+    }
   }
 
   // .complex-approach__item-desc

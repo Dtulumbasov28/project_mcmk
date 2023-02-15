@@ -13,18 +13,25 @@
 
   &__title {
     margin-bottom: 30px;
+
+    @media (max-width: $mobile) {
+      margin-bottom: 10px;
+    }
   }
 
   // .promotions__content
 
   &__content {
-	padding: 14px;
+    padding: 14px;
+
+    @media (max-width: $mobileSmall) {
+      padding: unset;
+    }
   }
 
   // .promotions__navigation
 
   &__navigation {
-
   }
 
   // .promotions__button
@@ -58,9 +65,13 @@
     text-align: center;
     border: 3px solid #717feb;
     border-radius: 20px;
-    padding: 85px 35px 20px;
+    padding: 85px 5px 20px;
     overflow: hidden;
     box-shadow: 0px 4px 10px 0px #00000029;
+
+    @media (max-width: $mobileSmall) {
+      box-shadow: unset;
+    }
   }
 
   // .promotions__slide-ribbon
@@ -102,7 +113,9 @@
     font-weight: 700;
     line-height: math.div(35, 30);
     color: $mainColorElem;
+
     margin-bottom: 18px;
+    padding: 0 30px;
   }
 
   // .promotions__slide-desc

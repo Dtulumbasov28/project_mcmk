@@ -13,6 +13,14 @@
     padding: 40px 100px;
 
     border-radius: 50px;
+
+    @media (max-width: $tablet) {
+      padding: 40px;
+    }
+    @media (max-width: $mobileBig) {
+      padding: 20px;
+      border: 3px solid rgba(113, 127, 235, 0.5);
+    }
   }
 
   // .numbers__title
@@ -21,7 +29,18 @@
     text-align: left;
     margin-bottom: 30px;
 
-	 font-size: 48px;
+    font-size: 48px;
+
+    @media (max-width: $tablet) {
+      font-size: 40px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 34px;
+      text-align: center;
+    }
+    @media (max-width: $mobileSmall) {
+      font-size: 24px;
+    }
   }
 
   // .numbers__content
@@ -30,6 +49,13 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 38px 170px;
+
+    @media (max-width: $tablet) {
+      grid-gap: 20px 60px;
+    }
+    @media (max-width: $mobileBig) {
+      grid-gap: 20px 10px;
+    }
   }
 
   // .numbers__item
@@ -64,6 +90,15 @@
     font-size: 64px;
     font-weight: 700;
     color: transparent;
+
+    @media (max-width: $mobile) {
+      font-size: 56px;
+    }
+
+    @media (max-width: $mobileBig) {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
   }
 
   // .numbers__desc
@@ -72,5 +107,15 @@
     font-size: 32px;
     font-weight: 700;
     color: $mainColorTwo;
+
+    @media (max-width: $mobile) {
+      font-size: 24px;
+    }
+    @media (max-width: $mobileBig) {
+      font-size: 20px;
+    }
+    @media (max-width: $mobileSmall) {
+      font-size: 16px;
+    }
   }
 }

@@ -12,12 +12,12 @@
 					<li class="main__benefit">Низкие цены</li>
 				</ul>
 				<div class="main__buttons-wrap">
-					<a class="main__buttons-doc main-buttons" href="#">
+					<a class="main__buttons main__buttons-doc" href="#">
 						<svg>
 							<use xlink:href="@img/icons/icons.svg#svg-icon-doc"></use>
 						</svg>
 						<span>Вызов врача</span></a>
-					<a class="main__buttons-calc main-buttons" href="#">
+					<a class="main__buttons main__buttons-calc" href="#">
 						<svg>
 							<use xlink:href="@img/icons/icons.svg#svg-icon-calc"></use>
 						</svg>
@@ -37,8 +37,9 @@
 			<form class="main__row-form main-form" action="#" method="#">
 				<div class="main-form__row-top">
 					<div class="main-form__input-group">
-						<input class="main-form__input form-input input-name" placeholder="Имя" required="" type="text" name="name"
-							autocomplete="off" onkeyup="this.value = this.value.replace(/[a-z0-9+= ]/gi,'');">
+						<input class="main-form__input form-input input-name" placeholder="Имя" required="" type="text"
+							name="name" autocomplete="off"
+							onkeyup="this.value = this.value.replace(/[a-z0-9+= ]/gi,'');">
 					</div>
 					<div class="main-form__input-group">
 						<input class="main-form__input form-input input-tel" placeholder="+7 (999)-999-99 99"
@@ -46,9 +47,10 @@
 					</div>
 					<input class="main-form__button button" type="submit" value="Заказать звонок"></input>
 				</div>
-				<div class="main-form__row-bottom">
+				<div class="main-form__row-bottom" data-da=".main-form__row-top,991.98,2">
 					<input type="checkbox" class="main-form__input-checkbox input-checkbox">
-					<label class="main-form__label-checkbox label-checkbox" for="main-form__input-checkbox">Нажимая на кнопку, вы
+					<label class="main-form__label-checkbox label-checkbox" for="main-form__input-checkbox">Нажимая на
+						кнопку, вы
 						соглашаетесь с условиями обработки персональных данных</label>
 				</div>
 			</form>

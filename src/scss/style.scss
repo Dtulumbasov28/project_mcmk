@@ -48,7 +48,9 @@ $containerWidth: $maxWidthContainer + $containerPadding;
 $pc: em($containerWidth); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
 $tablet: em(991.98); // Планшеты, некоторые телефоны в горизонтальном положении
 $mobile: em(767.98); // Телефоны L
+$mobileBig: em(574.98); // Телефоны M
 $mobileSmall: em(479.98); // Телефоны S
+$mobileXS: em(359.98); // Телефоны XS
 
 // Тип адаптива:
 // 1 = отзывчивость (у контейнера нет брейкпоинтов),
@@ -83,7 +85,6 @@ body {
 	// Прижимаем footer
 	> main {
 		flex: 1 1 auto;
-		margin-top: 194px;
 	}
 	// Фикс для слайдеров
 	> * {

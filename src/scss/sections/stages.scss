@@ -9,6 +9,10 @@
   &__title {
     text-align: left;
     margin-bottom: 40px;
+
+    @media (max-width: $mobileSmall) {
+      margin-bottom: 20px;
+    }
   }
 
   // .stages__body
@@ -16,12 +20,24 @@
   &__body {
     display: flex;
     column-gap: 60px;
+
+    @media (max-width: $tablet) {
+      column-gap: 30px;
+    }
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      row-gap: 20px;
+    }
   }
 
   // .stages__col-text
 
   &__col-text {
     width: 55%;
+
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
   }
 
   // .stages__text
@@ -44,6 +60,21 @@
       position: absolute;
       top: 10px;
       left: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    @media (max-width: $mobile) {
+      width: 60%;
+      margin-left: 25vw;
+      row-gap: 60px;
+    }
+    @media (max-width: $mobile) {
+      row-gap: 20px;
+    }
+    @media (max-width: $mobileSmall) {
+      margin-left: 10px;
+      width: 90%;
     }
   }
 
@@ -78,6 +109,16 @@
       border-radius: 50%;
       background-color: $mainColorElem;
     }
+
+    @media (max-width: $tablet) {
+      font-size: 30px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 24px;
+    }
+    @media (max-width: $mobileSmall) {
+      font-size: 20px;
+    }
   }
 
   // .stages__desc
@@ -86,5 +127,12 @@
     font-size: 24px;
     line-height: math.div(30, 24);
     color: $mainColorTwo;
+
+    @media (max-width: $mobile) {
+      font-size: 18px;
+    }
+    @media (max-width: $mobileSmall) {
+      font-size: 16px;
+    }
   }
 }

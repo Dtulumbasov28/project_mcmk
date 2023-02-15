@@ -1,6 +1,6 @@
 //====================================================================================================
 
-.header {    
+.header {
   position: fixed;
   width: 100%;
   background-color: #fff;
@@ -14,7 +14,22 @@
       align-items: center;
       column-gap: 8px;
       &::before {
-        content: url("@img/icon-location.svg");
+        content: "";
+        background-image: url("@img/icon-location.svg");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 100%;
+        width: 20px;
+        height: 30px;
+
+        @media (max-width: $tablet) {
+          width: 18px;
+          height: 24px;
+        }
+        @media (max-width: $mobile) {
+          width: 16px;
+          height: 20px;
+        }
       }
     }
   }
@@ -29,7 +44,20 @@
 
       font-weight: 500;
       &::before {
-        content: url("@img/icon-schedule.svg");
+        content: "";
+        background-image: url(@img/icon-schedule.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 30px;
+        height: 30px;
+        @media (max-width: $tablet) {
+          width: 24px;
+          height: 24px;
+        }
+        @media (max-width: $mobile) {
+          width: 20px;
+          height: 20px;
+        }
       }
     }
   }
@@ -48,6 +76,14 @@
     align-items: center;
     column-gap: 30px;
     margin-bottom: 20px;
+
+    @media (max-width: $tablet) {
+      margin-bottom: 0;
+    }
+    @media (max-width: $mobile) {
+      column-gap: 10px;
+      justify-content: space-between;
+    }
   }
 
   // .header__logo
@@ -62,6 +98,10 @@
     flex-direction: column;
     row-gap: 10px;
     margin-left: auto;
+
+    @media (max-width: $mobile) {
+      margin-left: unset;
+    }
   }
 
   // .header__messengers-phone
@@ -72,13 +112,32 @@
     column-gap: 10px;
 
     font-size: 32px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: math.div(39, 32);
     color: #000;
+    white-space: nowrap;
+
+    @media (max-width: $tablet) {
+      font-size: 24px;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 22px;
+      column-gap: 4px;
+    }
 
     & svg {
       max-height: 33px;
       max-width: 33px;
+
+      @media (max-width: $tablet) {
+        max-height: 28px;
+        max-width: 28px;
+      }
+      @media (max-width: $mobile) {
+        max-height: 24px;
+        max-width: 24px;
+      }
     }
   }
 
@@ -93,17 +152,34 @@
     font-weight: 500;
     line-height: math.div(28, 24);
     color: #2cc21f;
+    white-space: nowrap;
+
+    @media (max-width: $tablet) {
+      font-size: 22px;
+    }
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
 
     & svg {
       max-height: 28px;
       max-width: 30px;
       fill: #2cc21f;
+
+      @media (max-width: $tablet) {
+        max-height: 26px;
+        max-width: 24px;
+      }
     }
   }
 
   // .header__button
 
   &__button {
+    @media (max-width: $mobileBig) {
+      display: none;
+    }
   }
 
   // .header__row-bottom
@@ -114,37 +190,87 @@
   // .header__nav
 
   &__nav {
+    @media (max-width: $tablet) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      padding: 36px 30px 16px 16px;
+      background-color: $mainColorElem;
+
+      color: #fff;
+      transform: translateX(-2000px);
+      transition: all 0.4s ease-in;
+    }
   }
 
   // .header__list
 
   &__list {
     display: flex;
+    justify-content: space-between;
     column-gap: 18px;
 
     font-size: 16px;
     font-weight: 700;
     white-space: nowrap;
+
+    @media (max-width: $pc) {
+      font-size: 18px;
+    }
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      row-gap: 30px;
+    }
   }
 
   // .header__item
 
   &__item {
   }
+  // .header__item-pc
+
+  &__item-pc {
+    @media (max-width: $pc) {
+      display: none;
+    }
+  }
+  // .header__item-tablet
+
+  &__item-tablet {
+    display: none;
+
+    @media (max-width: $pc) {
+      display: block;
+    }
+  }
 }
 .header-top {
   background-color: $mainColorElem;
   padding: 8px 0;
 
+  @media (max-width: $mobileSmall) {
+    display: none;
+  }
+
   // .header-top__container
 
   &__container {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    column-gap: 20px;
 
     font-size: 22px;
     font-weight: 700;
     color: #fafbfc;
+
+    @media (max-width: $tablet) {
+      font-size: 16px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 12px;
+    }
   }
 }
 .logo {
@@ -153,65 +279,59 @@
 }
 .messengers-whatsapp {
 }
-.button {
-  background-color: $mainColorElem;
-  border-radius: 150px;
-  padding: 16px 28px;
-  color: #fff;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: math.div(28, 24);
-}
 
 //====================================================================================================
 
 //Burger
-/*
+
 .icon-menu {
-	display: none;
-	@media (max-width: $mobile) {
-		display: block;
-		position: relative;
-		width: rem(30);
-		height: rem(18);
-		cursor: pointer;
-		z-index: 5;
-		span,
-		&::before,
-		&::after {
-			content: "";
-			transition: all 0.3s ease 0s;
-			right: 0;
-			position: absolute;
-			width: 100%;
-			height: rem(2);
-			background-color: #000;
-		}
-		&::before {
-			top: 0;
-		}
-		&::after {
-			bottom: 0;
-		}
-		span {
-			top: calc(50% - rem(1));
-		}
-		.menu-open & {
-			span {
-				width: 0;
-			}
-			&::before,
-			&::after {
-			}
-			&::before {
-				top: calc(50% - rem(1));
-				transform: rotate(-45deg);
-			}
-			&::after {
-				bottom: calc(50% - rem(1));
-				transform: rotate(45deg);
-			}
-		}
-	}
+  display: none;
+  @media (max-width: $tablet) {
+    display: block;
+    position: relative;
+    width: rem(24);
+    height: rem(20);
+    cursor: pointer;
+    z-index: 5;
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 0.3s ease 0s;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: rem(2);
+      background-color: $mainColorElem;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    span {
+      top: calc(50% - rem(1));
+    }
+    .menu-open & {
+      span {
+        width: 0;
+      }
+      &::before,
+      &::after {
+      }
+      &::before {
+        top: calc(50% - rem(1));
+        transform: rotate(-45deg);
+      }
+      &::after {
+        bottom: calc(50% - rem(1));
+        transform: rotate(45deg);
+      }
+    }
+  }
 }
-*/
+.menu-open .header__nav {
+  transform: translate(0);
+  transition: all 0.4s ease-in;
+}

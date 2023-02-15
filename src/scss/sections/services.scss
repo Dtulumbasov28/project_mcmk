@@ -18,6 +18,13 @@
   &__body {
     display: flex;
     column-gap: 20px;
+
+    @media (max-width: $mobile) {
+      column-gap: unset;
+    }
+    @media (max-width: $mobileBig) {
+      flex-direction: column-reverse;
+    }
   }
 
   // .services__col-text
@@ -28,6 +35,16 @@
     border: 2px solid rgba(109, 110, 118, 0.1);
     border-radius: 20px;
     box-shadow: 0px 1px 10px 0px #0000001a;
+
+    @media (max-width: $mobile) {
+      border: unset;
+      border-radius: unset;
+      box-shadow: unset;
+      padding: 20px 10px 20px 2px;
+    }
+    @media (max-width: $mobileBig) {
+      width: 100%;
+    }
   }
 
   // .services__img
@@ -55,6 +72,10 @@
       border-radius: 20px;
       object-fit: cover;
     }
+
+    @media (max-width: $mobileBig) {
+      display: none;
+    }
   }
 
   // .services__content
@@ -75,23 +96,44 @@
     line-height: math.div(48, 32);
 
     margin-bottom: 20px;
+
+    @media (max-width: $mobile) {
+      line-height: math.div(38, 32);
+    }
+
+    @media (max-width: $mobileBig) {
+      font-size: 24px;
+    }
   }
 
   // .services__text
 
   &__text {
-    font-size: 18px;
     font-weight: 500;
     line-height: math.div(28, 18);
     color: $mainColorTwo;
 
     margin-bottom: 20px;
+
+    @media (max-width: $tablet) {
+      font-size: 16px;
+    }
+    @media (max-width: $mobileBig) {
+      margin-bottom: 14px;
+    }
   }
 
   // .services__button
   &__button {
     border-radius: 20px;
     padding: 16px 50px;
+
+    @media (max-width: $mobileBig) {
+      display: flex;
+      margin-left: auto;
+      border-radius: 10px;
+      padding: 10px 20px;
+    }
   }
 
   // .services__col-contents
@@ -102,6 +144,10 @@
     //  border: 2px solid rgba(109, 110, 118, 0.1);
     display: flex;
     flex-direction: column;
+
+    @media (max-width: $mobileBig) {
+      width: 100%;
+    }
   }
 
   // .services__tab
@@ -117,12 +163,18 @@
     &._tab-active {
       color: #fff;
       background-color: rgba(113, 127, 235, 0.5);
-		border: 2px solid rgba(113, 127, 235, 0.1);
-
+      border: 2px solid rgba(113, 127, 235, 0.1);
 
       & .services__slogan {
         color: $mainColor;
       }
+    }
+
+    @media (max-width: $tablet) {
+      padding: 30px 0 30px 16px;
+    }
+    @media (max-width: $mobileBig) {
+      padding: 10px 0 10px 16px;
     }
   }
   // .services__headline
@@ -132,6 +184,13 @@
     font-weight: 700;
 
     margin-bottom: 10px;
+
+    @media (max-width: $mobile) {
+      font-size: 28px;
+    }
+    @media (max-width: $mobileBig) {
+      font-size: 30px;
+    }
   }
 
   // .services__slogan

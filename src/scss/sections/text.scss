@@ -10,6 +10,11 @@
     display: flex;
     align-items: center;
     column-gap: 28px;
+
+    @media (max-width: $tablet) {
+      flex-direction: column-reverse;
+      row-gap: 28px;
+    }
   }
 
   // .text__col-text
@@ -17,6 +22,12 @@
   &__col-text {
     width: 50%;
 
+    @media (max-width: $pc) {
+      width: 60%;
+    }
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
   }
 
   // .text__col-img
@@ -65,6 +76,14 @@
   justify-content: center;
   column-gap: 30px;
 
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  @media (max-width: $mobileSmall) {
+    padding: 16px;
+  }
+
   // .widget__col-text
 
   &__col-text {
@@ -78,6 +97,14 @@
     font-size: 48px;
     font-weight: 700;
     line-height: math.div(56, 48);
+
+    @media (max-width: $tablet) {
+      font-size: 30px;
+      text-align: center;
+    }
+    @media (max-width: $mobileSmall) {
+      font-size: 24px;
+    }
   }
 
   // .widget__subtitle
@@ -102,6 +129,12 @@
 
   &__input-group {
     display: flex;
+
+    @media (max-width: $mobileSmall) {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 10px;
+    }
   }
 
   // .widget-form__input
@@ -120,6 +153,13 @@
     font-weight: 500;
     color: #acacac;
 
+    @media (max-width: $tablet) {
+      font-size: 16px;
+    }
+    @media (max-width: $mobileSmall) {
+      padding: 10px 20px 10px 60px;
+    }
+
     &::placeholder {
       color: #acacac;
     }
@@ -129,14 +169,20 @@
 
   &__button {
     margin-left: -60px;
+
+    @media (max-width: $mobileSmall) {
+      margin-left: unset;
+      padding: 8px 16px;
+      font-size: 20px;
+    }
   }
 }
 
 .text-reverse {
   padding: 40px 0 80px 0;
 
-	// .text-reverse__body
-	&__body {
-		flex-direction: row-reverse;
-	}
+  // .text-reverse__body
+  &__body {
+    flex-direction: row-reverse;
+  }
 }

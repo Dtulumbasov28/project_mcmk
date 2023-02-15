@@ -18,6 +18,10 @@
     display: flex;
     flex-direction: column;
     row-gap: 60px;
+
+    @media (max-width: $mobile) {
+      display: none;
+    }
   }
 
   // .article__author
@@ -115,7 +119,11 @@
 
   &__contents-body {
     border-top: 3px solid;
-    border-image: linear-gradient(to right, $mainColorThree 0% 20%, $mainColor 20% 80%);
+    border-image: linear-gradient(
+      to right,
+      $mainColorThree 0% 20%,
+      $mainColor 20% 80%
+    );
     border-image-slice: 1;
     padding: 36px 0 0 0;
   }
@@ -135,6 +143,10 @@
     font-size: 30px;
     font-weight: 700;
     list-style-type: none;
+
+    @media (max-width: $tablet) {
+      font-size: 24px;
+    }
   }
 
   // .article__contents-headline
@@ -170,12 +182,19 @@
     flex-direction: column;
     align-items: flex-start;
     row-gap: 40px;
+
+    @media (max-width: $tablet) {
+      row-gap: 20px;
+    }
+
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
   }
 
   // .article__block-text
 
   &__block-text {
-
   }
 
   // .article__title
