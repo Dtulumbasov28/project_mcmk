@@ -17,17 +17,32 @@
     color: $mainColorElem;
 
     margin-bottom: 40px;
+
+    @media (max-width: $mobile) {
+      margin-bottom: 20px;
+    }
+    @media (max-width: $mobileBig) {
+      margin-bottom: 10px;
+    }
   }
 
   // .reviews__content
 
   &__content {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $mobile) {
+      flex-direction: column-reverse;
+    }
   }
 
   // .reviews__navigation
 
   &__navigation {
-
+    @media (max-width: $mobile) {
+      margin: 0 0 13px 0;
+    }
   }
 
   // .reviews__button
@@ -58,9 +73,9 @@
     &::before {
       content: url(@img/reviews-quotes.svg);
       position: absolute;
-		right: 40px;
-		bottom: 20px;
-		z-index: -1;
+      right: 40px;
+      bottom: 20px;
+      z-index: -1;
     }
   }
 
@@ -72,6 +87,13 @@
     line-height: math.div(24, 16);
 
     margin-bottom: 40px;
+
+    @media (max-width: $mobile) {
+      margin-bottom: 20px;
+    }
+    @media (max-width: $mobileBig) {
+      margin-bottom: 10px;
+    }
   }
 
   // .reviews__author
@@ -80,6 +102,10 @@
     display: flex;
     align-items: center;
     column-gap: 10px;
+
+    @media (max-width: $mobileBig) {
+      justify-content: center;
+    }
   }
 
   // .reviews__author-img

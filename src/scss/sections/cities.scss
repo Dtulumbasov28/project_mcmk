@@ -7,14 +7,20 @@
   // .cities__title
 
   &__title {
-    text-align-last: left;
+    text-align: left;
     margin-bottom: 30px;
   }
 
   // .cities__body
 
   &__body {
+    display: flex;
+    flex-direction: column;
     padding: 14px;
+
+    @media (max-width: $mobile) {
+      flex-direction: column-reverse;
+    }
   }
 
   // .cities__navigation
@@ -22,6 +28,10 @@
   &__navigation {
     padding: 13px 13px 0 0;
     margin-bottom: 30px;
+
+    @media (max-width: $mobile) {
+      margin-top: 10px;
+    }
   }
 
   // .cities__button
@@ -68,6 +78,10 @@
 
     padding: 0 18px;
     margin-bottom: 10px;
+
+    @media (max-width: $pc) {
+      padding: unset;
+    }
   }
 
   // .cities__desc
@@ -79,6 +93,10 @@
 
     padding: 0 18px;
     margin-bottom: 16px;
+
+    @media (max-width: $pc) {
+      padding: unset;
+    }
   }
 
   // .cities__slide-button

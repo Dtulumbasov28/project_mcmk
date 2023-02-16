@@ -43,13 +43,23 @@
     align-items: center;
     justify-content: space-between;
     padding: 18px 24px;
-    border-radius: 8px;
+    border-radius: 8px 8px 0 0;
     background-color: rgba(113, 127, 235, 0.5);
 
     font-size: 20px;
     font-weight: 700;
     line-height: math.div(30, 20);
     color: #fafbfc;
+    text-align: left;
+
+    @media (max-width: $tablet) {
+      font-size: 18px;
+      line-height: math.div(22, 18);
+    }
+    @media (max-width: $mobileBig) {
+      font-size: 16px;
+      padding: 10px 30px 10px 10px;
+    }
   }
 
   // .questions-spollers__click
@@ -57,6 +67,7 @@
   &__click {
     display: flex;
     position: relative;
+    padding-left: 20px;
 
     &::before {
       transform: translate(-50%, -50%) rotate(-90deg);
@@ -87,6 +98,13 @@
     padding: 18px 26px;
     border-radius: 0 0 8px 8px;
     background-color: rgba(113, 127, 235, 0.2);
+
+    @media (max-width: $tablet) {
+      font-size: 16px;
+    }
+    @media (max-width: $mobileBig) {
+      padding: 10px;
+    }
   }
 }
 .questions-spollers__button._spoller-active .questions-spollers__click {

@@ -61,6 +61,7 @@ function initSliders() {
     }
   }
   resizeScrenSliderFeatures();
+
   var promotionsSlider = new Swiper(".promotions__content", {
     // Указываем скласс нужного слайдера
     // Подключаем модули слайдера
@@ -104,6 +105,7 @@ function initSliders() {
     // События
     on: {},
   });
+
   function resizeScrenSliderComplex() {
     var width = window.innerWidth;
     if (width < 992) {
@@ -145,6 +147,7 @@ function initSliders() {
     speed: 800,
     centerInsufficientSlides: true,
   });
+
   var photoSlide = new Swiper(".photos__col-img", {
     modules: [Navigation, Thumbs],
     loop: true,
@@ -162,6 +165,7 @@ function initSliders() {
       swiper: photoThumbSlide,
     },
   });
+
   var reviewSlide = new Swiper(".reviews__content", {
     modules: [Navigation],
     loop: true,
@@ -174,7 +178,26 @@ function initSliders() {
       prevEl: ".reviews__button-prev",
       nextEl: ".reviews__button-next",
     },
+
+    // Брейкпоинты
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        autoHeight: true,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      991: {
+        slidesPerView: 3,
+        spaceBetween: 70,
+      },
+    },
   });
+
   var videoReviewSlide = new Swiper(".video-reviews__content", {
     modules: [Navigation],
     loop: true,
@@ -187,7 +210,61 @@ function initSliders() {
       prevEl: ".video-reviews__button-prev",
       nextEl: ".video-reviews__button-next",
     },
+
+    // Брейкпоинты
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        autoHeight: true,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      991: {
+        slidesPerView: 3,
+        spaceBetween: 70,
+      },
+    },
   });
+
+  function resizeScrenSliderSeekTreatment() {
+    var width = window.innerWidth;
+    if (width < 992) {
+      var seekTreatmentSlide = new Swiper(".seek-treatment__slider", {
+        modules: [Navigation],
+        loop: true,
+        speed: 800,
+
+        // Кнопки "влево/вправо"
+        navigation: {
+          prevEl: ".seek-treatment__button-prev",
+          nextEl: ".seek-treatment__button-next",
+        },
+
+        // Брейкпоинты
+
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          480: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          674: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+        },
+      });
+    }
+  }
+  resizeScrenSliderSeekTreatment();
+
   var employeesSlide = new Swiper(".employees__body", {
     modules: [Navigation],
     loop: true,
@@ -200,7 +277,30 @@ function initSliders() {
       prevEl: ".employees__button-prev",
       nextEl: ".employees__button-next",
     },
+
+    // Брейкпоинты
+
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        autoHeight: true,
+      },
+      575: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      992: {
+        slidesPerView: 4,
+        spaceBetween: 46,
+      },
+    },
   });
+
   var citiesSlide = new Swiper(".cities__body", {
     modules: [Navigation],
     loop: true,
@@ -213,6 +313,28 @@ function initSliders() {
       prevEl: ".cities__button-prev",
       nextEl: ".cities__button-next",
     },
+
+        // Брейкпоинты
+
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            autoHeight: true,
+          },
+          575: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          992: {
+            slidesPerView: 4,
+            spaceBetween: 46,
+          },
+        },
   });
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)

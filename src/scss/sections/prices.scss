@@ -19,6 +19,11 @@
     align-items: flex-start;
     width: 90%;
     margin: 0 auto 0 auto;
+
+    @media (max-width: $tablet) {
+      margin: unset;
+      width: 100%;
+    }
   }
 
   // .prices__tabs
@@ -48,6 +53,13 @@
       color: $mainColor;
       background: rgba(113, 127, 235, 0.2);
     }
+
+    @media (max-width: $tablet) {
+      font-size: 20px;
+    }
+    @media (max-width: $mobile) {
+      border-radius: unset !important;
+    }
   }
 
   // .prices__content
@@ -56,11 +68,30 @@
     background: rgba(113, 127, 235, 0.2);
     border-radius: 0px 20px 20px 20px;
     padding: 60px 30px 30px 60px;
+
+    @media (max-width: $tablet) {
+      padding: 30px;
+    }
+    @media (max-width: $mobile) {
+      display: flex;
+      flex-direction: column;
+      row-gap: 14px;
+      border-radius: unset;
+      padding: 0px;
+      background: unset;
+    }
+
   }
 
   // .prices__content-tab
 
   &__content-tab {
+    @media (max-width: $mobile) {
+      border-radius: 20px;
+      overflow: hidden;
+      background: rgba(113, 127, 235, 0.2);
+      padding: 10px 4px;
+    }
   }
 
   // .prices__content-tab-wrap
@@ -80,6 +111,20 @@
     text-align: center;
     padding: 0 120px;
     margin-bottom: 20px;
+
+    @media (max-width: $pc) {
+      font-size: 28px;
+    }
+    @media (max-width: $tablet) {
+      padding: 0 20px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 24px;
+    }
+    @media (max-width: $mobileBig) {
+      font-size: 20px;
+      padding: 0;
+    }
   }
 
   // .prices__content-list
@@ -101,6 +146,36 @@
     line-height: math.div(28, 24);
 
     border-bottom: 2px solid #717feb;
+
+    &:last-child {
+      display: none;
+      border-bottom: unset;
+
+      @media (max-width: $mobile) {
+        display: flex;
+      }
+      & a {
+        margin: 0 auto 0 auto;
+      }
+    }
+
+    @media (max-width: $pc) {
+      font-size: 20px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 18px;
+      column-gap: 40px;
+      padding: 8px 0;
+    }
+    @media (max-width: $mobileBig) {
+      font-size: 16px;
+      column-gap: 18px;
+      padding: 8px 0 4px 0;
+    }
+    @media (max-width: $mobileSmall) {
+      font-size: 14px;
+      column-gap: 10px;
+    }
   }
 
   // .prices__content-headline

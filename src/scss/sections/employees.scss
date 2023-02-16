@@ -14,13 +14,22 @@
   // .employees__body
 
   &__body {
+    display: flex;
+    flex-direction: column;
     padding: 2px;
+
+    @media (max-width: $mobileBig) {
+      padding: unset;
+      flex-direction: column-reverse;
+    }
   }
 
   // .employees__navigation
 
   &__navigation {
-
+    @media (max-width: $mobileBig) {
+      margin: 0 0 13px 0;
+    }
   }
 
   // .employees__button
@@ -56,6 +65,14 @@
 
     &:hover {
       outline: 1px solid #737fe6;
+
+      @media (max-width: $tablet) {
+        outline: unset;
+      }
+    }
+
+    @media (max-width: $pc) {
+      padding: 16px 18px 10px;
     }
   }
 

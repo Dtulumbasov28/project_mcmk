@@ -16,6 +16,16 @@
     font-weight: 700;
 
     margin-bottom: 20px;
+
+    @media (max-width: $tablet) {
+      font-size: 50px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 40px;
+    }
+    @media (max-width: $mobileBig) {
+      font-size: 24px;
+    }
   }
 
   // .contact__top-subtitle
@@ -23,6 +33,10 @@
   &__top-subtitle {
     font-size: 24px;
     font-weight: 500;
+
+    @media (max-width: $mobileBig) {
+      font-size: 16px;
+    }
   }
 
   // .contact__container
@@ -38,6 +52,21 @@
 
     box-shadow: 0px 15px 40px 0px #0000001a;
     border-radius: 0 0 20px 20px;
+
+    @media (max-width: $tablet) {
+      column-gap: 14px;
+    }
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      margin: 0 auto 0 auto;
+    }
+    @media (max-width: $mobileBig) {
+      width: 100%;
+      box-shadow: unset;
+      border-radius: unset;
+    }
   }
 
   // .contact__col-form
@@ -45,17 +74,45 @@
   &__col-form {
     width: 40%;
     padding: 0 0 40px 60px;
+
+    @media (max-width: $pc) {
+      padding: 0 0 20px 20px;
+    }
+    @media (max-width: $tablet) {
+      width: 46%;
+      padding: 0 0 10px 10px;
+    }
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+    @media (max-width: $mobileBig) {
+      padding: unset;
+    }
   }
 
   // .contact__title
 
   &__title {
-    font-size: 51px;
+    font-size: 50px;
     color: $mainColorThree;
     text-align: left;
     text-transform: uppercase;
 
     margin: 50px 0px 60px 0px;
+
+    @media (max-width: $pc) {
+      font-size: 44px;
+    }
+    @media (max-width: $tablet) {
+      font-size: 40px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 34px;
+      margin: 20px 0px 20px 0px;
+    }
+    @media (max-width: $mobileBig) {
+      font-size: 24px;
+    }
   }
 
   // .contact__form
@@ -69,6 +126,17 @@
     width: 60%;
     border-radius: 0 0 20px 0;
     overflow: hidden;
+
+    @media (max-width: $tablet) {
+      width: 54%;
+    }
+    @media (max-width: $mobile) {
+      width: 100%;
+      border-radius: 0 0 20px 20px;
+    }
+    @media (max-width: $mobileBig) {
+      display: none;
+    }
 
     & img {
       width: 100%;
@@ -105,6 +173,10 @@
     }
     &:focus {
     }
+
+    @media (max-width: $mobileBig) {
+      padding: 14px 14px 8px 30px;
+    }
   }
 
   // .contact-form__row-bottom
@@ -122,6 +194,11 @@
 
     margin-top: 50px;
     padding: 14px 38px;
+
+    @media (max-width: $mobileBig) {
+      display: flex;
+      margin: 18px auto 0 auto;
+    }
   }
 
   // .contact-form__input-checkbox
