@@ -3483,6 +3483,7 @@
             observer: true,
             observeParents: true,
             speed: 500,
+            grabCursor: true,
             slideToClickedSlide: true,
             centerInsufficientSlides: true,
             navigation: {
@@ -3514,12 +3515,20 @@
             if (width < 992) new core(".complex-approach__slider", {
                 modules: [ Navigation ],
                 loop: true,
-                slidesPerView: 1,
-                spaceBetween: 20,
                 speed: 500,
                 navigation: {
                     prevEl: ".complex-approach__button-prev",
                     nextEl: ".complex-approach__button-next"
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 0
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    }
                 }
             });
         }
@@ -3529,6 +3538,7 @@
             loop: true,
             slidesPerView: 5,
             speed: 500,
+            grabCursor: true,
             centerInsufficientSlides: true
         });
         new core(".photos__col-img", {
@@ -3537,6 +3547,7 @@
             slidesPerView: 1,
             spaceBetween: 20,
             speed: 500,
+            grabCursor: true,
             navigation: {
                 prevEl: ".photos__button-prev",
                 nextEl: ".photos__button-next"
@@ -3551,6 +3562,7 @@
             slidesPerView: 3,
             spaceBetween: 70,
             speed: 500,
+            grabCursor: true,
             navigation: {
                 prevEl: ".reviews__button-prev",
                 nextEl: ".reviews__button-next"
@@ -3575,8 +3587,8 @@
             modules: [ Navigation ],
             loop: true,
             slidesPerView: 3,
-            spaceBetween: 22,
             speed: 500,
+            grabCursor: true,
             navigation: {
                 prevEl: ".video-reviews__button-prev",
                 nextEl: ".video-reviews__button-next"
@@ -3589,11 +3601,11 @@
                 },
                 768: {
                     slidesPerView: 2,
-                    spaceBetween: 40
+                    spaceBetween: 20
                 },
                 991: {
                     slidesPerView: 3,
-                    spaceBetween: 70
+                    spaceBetween: 20
                 }
             }
         });
@@ -3612,7 +3624,7 @@
                         slidesPerView: 1,
                         spaceBetween: 20
                     },
-                    480: {
+                    400: {
                         slidesPerView: 2,
                         spaceBetween: 20
                     },
@@ -3628,8 +3640,8 @@
             modules: [ Navigation ],
             loop: true,
             slidesPerView: 4,
-            spaceBetween: 32,
             speed: 500,
+            grabCursor: true,
             navigation: {
                 prevEl: ".employees__button-prev",
                 nextEl: ".employees__button-next"
@@ -3650,7 +3662,7 @@
                 },
                 992: {
                     slidesPerView: 4,
-                    spaceBetween: 46
+                    spaceBetween: 30
                 }
             }
         });
@@ -3660,6 +3672,7 @@
             slidesPerView: 4,
             spaceBetween: 40,
             speed: 500,
+            grabCursor: true,
             navigation: {
                 prevEl: ".cities__button-prev",
                 nextEl: ".cities__button-next"
@@ -3805,7 +3818,7 @@
             var button = el.querySelector(".block-text__button");
             if (button) button.addEventListener("click", (() => {
                 el.classList.toggle("disclosed");
-                button.textContent = el.classList.contains("disclosed") ? "Скрыть" : "Читать далее >";
+                button.textContent = el.classList.contains("disclosed") ? "Скрыть" : "Читать далее";
             }));
         }));
     }
@@ -3819,7 +3832,7 @@
     addDataAttr();
     document.addEventListener("DOMContentLoaded", (function() {
         var eventCalllback = function(e) {
-            var el = e.target, clearVal = el.dataset.phoneClear, pattern = el.dataset.phonePattern, matrix_def = "+7(___) ___-__-__", matrix = pattern ? pattern : matrix_def, i = 0, def = matrix.replace(/\D/g, ""), val = e.target.value.replace(/\D/g, "");
+            var el = e.target, clearVal = el.dataset.phoneClear, pattern = el.dataset.phonePattern, matrix_def = "+7 (___) ___-__-__", matrix = pattern ? pattern : matrix_def, i = 0, def = matrix.replace(/\D/g, ""), val = e.target.value.replace(/\D/g, "");
             if ("false" !== clearVal && "blur" === e.type) if (val.length < matrix.match(/([\_\d])/g).length) {
                 e.target.value = "";
                 return;
