@@ -1,4 +1,6 @@
 .main {
+  background-color: #fff;
+
   // .main__container
 
   &__container {
@@ -28,6 +30,8 @@
     font-size: 20px;
     font-weight: 500;
     color: $mainColor;
+    position: relative;
+    z-index: 1;
 
     @media (max-width: $mobile) {
       width: 100%;
@@ -98,6 +102,8 @@
     @media (max-width: $mobileSmall) {
       justify-content: space-between;
       column-gap: 10px;
+      row-gap: 10px;
+      flex-wrap: wrap;
     }
   }
   // .main__buttons
@@ -106,8 +112,22 @@
     align-items: center;
     column-gap: 8px;
     padding: 10px 16px;
-    border: 2px solid #71bceb;
-    border-radius: 60px;
+    border: 2px solid $mainColorElem;
+    border-radius: 10px;
+    @media (min-width: $tablet) {
+      &:hover {
+        border: 2px solid #a071eb;
+        outline: unset;
+        transition: all 0.1s ease-in-out;
+      }
+    }
+    @media (max-width: $tablet) {
+      &:active {
+        border: 2px solid $mainColorElem;
+        outline: unset;
+        transition: all 0.1s ease-in-out;
+      }
+    }
 
     @media (max-width: $mobileSmall) {
       padding: 6px 12px;
@@ -149,7 +169,7 @@
   &__col-right {
     position: relative;
     width: 600px;
-    z-index: -1;
+    z-index: 0;
 
     @media (max-width: $mobile) {
       display: none;
@@ -248,22 +268,42 @@
     margin-bottom: 22px;
 
     @media (max-width: $tablet) {
+      column-gap: 10px;
+    }
+    @media (max-width: $mobile) {
       font-size: 16px;
-
-      flex-direction: column;
       row-gap: 20px;
-      margin-bottom: unset;
+      flex-wrap: wrap;
+      justify-content: center;
     }
   }
 
   // .main-form__input-group
 
   &__input-group {
+    @media (max-width: $mobileBig) {
+      width: 48%;
+    }
+    @media (max-width: $mobileXS) {
+      width: 100%;
+    }
   }
 
   // .main-form__input
 
   &__input {
+    @media (max-width: $tablet) {
+      padding: 14px 6px 14px 30px;
+      background-position: 6px 50%;
+    }
+    @media (max-width: $tablet) {
+      &.input-name {
+        background-position: 0px 50%;
+      }
+    }
+    @media (max-width: $mobileBig) {
+      width: 100%;
+    }
   }
 
   // .main-form__button

@@ -1,5 +1,6 @@
 {
 	"name": "fls-start",
+	"homepage": "https://dtulumbasov28.github.io/project_mcmk",
 	"version": "3.0.0",
 	"description": "Start template with Gulp and Webpack",
 	"author": "FLS",
@@ -12,7 +13,7 @@
 		"build": "gulp build --build",
 		"sprite": "gulp sprite",
 		"fonts": "gulp fonts --rewrite",
-		"deploy": "gulp deployFTP --build",
+		"deploy": "gh-pages -d dist",
 		"zip": "gulp deployZIP --build",
 		"devbuild": "gulp build --build --nowebp",
 		"tmp": "gulp -f gulpfile.tmp.js",
@@ -24,6 +25,7 @@
 		"del": "latest",
 		"file-include-webpack-plugin-replace": "latest",
 		"fls-bemtree-from-html": "^1.0.0",
+		"gh-pages": "^4.0.0",
 		"gulp": "latest",
 		"gulp-autoprefixer": "latest",
 		"gulp-clean-css": "latest",

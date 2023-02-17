@@ -1,5 +1,5 @@
 .numbers {
-  background-color: #fffbf3;
+  background-color: #edeffa;
 
   // .numbers__container
 
@@ -64,7 +64,7 @@
     max-width: 320px;
     &:nth-child(1) {
       & .numbers__heading {
-        color: #71bceb;
+        color: $mainColorElem;
       }
     }
     &:nth-child(2) {

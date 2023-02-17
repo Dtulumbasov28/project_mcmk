@@ -43,7 +43,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 18px 24px;
-    border-radius: 8px 8px 0 0;
+    border-radius: 8px;
     background-color: rgba(113, 127, 235, 0.5);
 
     font-size: 20px;
@@ -51,6 +51,10 @@
     line-height: math.div(30, 20);
     color: #fafbfc;
     text-align: left;
+
+    &._spoller-active {
+      border-radius: 8px 8px 0 0;
+    }
 
     @media (max-width: $tablet) {
       font-size: 18px;
@@ -101,6 +105,7 @@
 
     @media (max-width: $tablet) {
       font-size: 16px;
+      line-height: math.div(20 , 16);
     }
     @media (max-width: $mobileBig) {
       padding: 10px;

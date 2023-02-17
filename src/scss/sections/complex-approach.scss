@@ -1,6 +1,5 @@
 .complex-approach {
-  background-color: #fffbf3;
-  padding: 40px 0 0 0;
+  background-color: #edeffa;
   // .complex-approach__container
 
   &__container {
@@ -59,6 +58,11 @@
 
   &__slider {
     max-width: 100%;
+    @media (max-width: $tablet) {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-top: 20px;
+    }
   }
   // .complex-approach__navigation
 
@@ -67,6 +71,7 @@
 
     @media (max-width: $tablet) {
       display: flex;
+      margin-bottom: 16px;
     }
   }
   // .complex-approach__list

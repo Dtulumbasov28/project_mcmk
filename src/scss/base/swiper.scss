@@ -33,3 +33,11 @@
 .swiper-button-lock {
 	display: none !important;
 }
+@keyframes line-slide {
+	0% {
+	  background-position: -5% 0;
+	}
+	100% {
+	  background-position: 100% 0;
+	}
+  }

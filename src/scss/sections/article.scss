@@ -48,6 +48,12 @@
     border-image: linear-gradient(to right, #71bceb 0% 20%, $mainColor 20% 80%);
     border-image-slice: 1;
     padding: 36px 46px 0 20px;
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      row-gap: 20px;
+      padding: 20px 20px 0 20px;
+    }
   }
 
   // .article__author-img
@@ -121,7 +127,7 @@
     border-top: 3px solid;
     border-image: linear-gradient(
       to right,
-      $mainColorThree 0% 20%,
+      $mainColorElem 0% 20%,
       $mainColor 20% 80%
     );
     border-image-slice: 1;
@@ -157,6 +163,19 @@
     margin-bottom: 12px;
 
     line-height: math.div(36, 30);
+
+    @media (min-width: $tablet) {
+      &:hover {
+        color: $mainColorElem;
+        transition: all 0.1s ease-in-out;
+      }
+    }
+    @media (max-width: $tablet) {
+      &:active {
+        color: $mainColorElem;
+        transition: all 0.1s ease-in-out;
+      }
+    }
 
     &::before {
       content: attr(data-num);

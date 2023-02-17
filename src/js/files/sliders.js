@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation, Thumbs } from "swiper";
+import Swiper, { Navigation, Thumbs, Autoplay } from "swiper";
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -36,7 +36,7 @@ function initSliders() {
         loop: true,
         slidesPerView: 1,
         spaceBetween: 20,
-        speed: 800,
+        speed: 500,
 
         // Кнопки "влево/вправо"
         navigation: {
@@ -71,7 +71,8 @@ function initSliders() {
     observer: true,
 
     observeParents: true,
-    speed: 800,
+    speed: 500,
+    grabCursor: true,
     slideToClickedSlide: true,
     centerInsufficientSlides: true,
 
@@ -112,9 +113,7 @@ function initSliders() {
       var complexSlide = new Swiper(".complex-approach__slider", {
         modules: [Navigation],
         loop: true,
-        slidesPerView: 1,
-        spaceBetween: 20,
-        speed: 800,
+        speed: 500,
 
         // Кнопки "влево/вправо"
         navigation: {
@@ -124,17 +123,16 @@ function initSliders() {
 
         // Брейкпоинты
 
-        // breakpoints: {
-        // 	320: {
-        // 		slidesPerView: 1,
-        // 		spaceBetween: 0,
-        // 		autoHeight: true,
-        // 	},
-        // 	768: {
-        // 		slidesPerView: 2,
-        // 		spaceBetween: 20,
-        // 	},
-        // },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+        },
       });
     }
   }
@@ -144,7 +142,9 @@ function initSliders() {
     modules: [Navigation],
     loop: true,
     slidesPerView: 5,
-    speed: 800,
+    speed: 500,
+    grabCursor: true,
+
     centerInsufficientSlides: true,
   });
 
@@ -153,7 +153,8 @@ function initSliders() {
     loop: true,
     slidesPerView: 1,
     spaceBetween: 20,
-    speed: 800,
+    speed: 500,
+    grabCursor: true,
 
     // Кнопки "влево/вправо"
     navigation: {
@@ -171,7 +172,8 @@ function initSliders() {
     loop: true,
     slidesPerView: 3,
     spaceBetween: 70,
-    speed: 800,
+    speed: 500,
+    grabCursor: true,
 
     // Кнопки "влево/вправо"
     navigation: {
@@ -202,8 +204,8 @@ function initSliders() {
     modules: [Navigation],
     loop: true,
     slidesPerView: 3,
-    spaceBetween: 22,
-    speed: 800,
+    speed: 500,
+    grabCursor: true,
 
     // Кнопки "влево/вправо"
     navigation: {
@@ -221,11 +223,11 @@ function initSliders() {
       },
       768: {
         slidesPerView: 2,
-        spaceBetween: 40,
+        spaceBetween: 20,
       },
       991: {
         slidesPerView: 3,
-        spaceBetween: 70,
+        spaceBetween: 20,
       },
     },
   });
@@ -236,7 +238,7 @@ function initSliders() {
       var seekTreatmentSlide = new Swiper(".seek-treatment__slider", {
         modules: [Navigation],
         loop: true,
-        speed: 800,
+        speed: 500,
 
         // Кнопки "влево/вправо"
         navigation: {
@@ -251,7 +253,7 @@ function initSliders() {
             slidesPerView: 1,
             spaceBetween: 20,
           },
-          480: {
+          400: {
             slidesPerView: 2,
             spaceBetween: 20,
           },
@@ -269,8 +271,8 @@ function initSliders() {
     modules: [Navigation],
     loop: true,
     slidesPerView: 4,
-    spaceBetween: 32,
-    speed: 800,
+    speed: 500,
+    grabCursor: true,
 
     // Кнопки "влево/вправо"
     navigation: {
@@ -296,7 +298,7 @@ function initSliders() {
       },
       992: {
         slidesPerView: 4,
-        spaceBetween: 46,
+        spaceBetween: 30,
       },
     },
   });
@@ -306,7 +308,8 @@ function initSliders() {
     loop: true,
     slidesPerView: 4,
     spaceBetween: 40,
-    speed: 800,
+    speed: 500,
+    grabCursor: true,
 
     // Кнопки "влево/вправо"
     navigation: {
@@ -314,28 +317,46 @@ function initSliders() {
       nextEl: ".cities__button-next",
     },
 
-        // Брейкпоинты
+    // Брейкпоинты
 
-        breakpoints: {
-          0: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            autoHeight: true,
-          },
-          575: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-          992: {
-            slidesPerView: 4,
-            spaceBetween: 46,
-          },
-        },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        autoHeight: true,
+      },
+      575: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      992: {
+        slidesPerView: 4,
+        spaceBetween: 46,
+      },
+    },
   });
+
+  function resizeScrenSliderAside() {
+    var width = window.innerWidth;
+    if (width < 768) {
+      var asideSlide = new Swiper(".photos__aside-ticker", {
+        modules: [Autoplay],
+        spaceBetween: 0,
+        speed: 4000,
+        autoplay: {
+          delay: 0,
+        },
+        loop: true,
+        slidesPerView: 1,
+        allowTouchMove: false,
+      });
+    }
+  }
+  resizeScrenSliderAside();
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 function initSlidersScroll() {

@@ -50,6 +50,7 @@ $tablet: em(991.98); // Планшеты, некоторые телефоны в
 $mobile: em(767.98); // Телефоны L
 $mobileBig: em(574.98); // Телефоны M
 $mobileSmall: em(479.98); // Телефоны S
+$mobileXS: em(399.98); // Телефоны XS
 
 // Тип адаптива:
 // 1 = отзывчивость (у контейнера нет брейкпоинтов),
@@ -170,6 +171,7 @@ body {
 @import "sections/seek-treatment";
 @import "sections/prices";
 @import "sections/installment";
+@import "sections/dubletext";
 @import "sections/license";
 @import "sections/questions";
 @import "sections/employees";
