@@ -604,8 +604,9 @@ input[type=submit] {
   -webkit-column-gap: 30px;
      -moz-column-gap: 30px;
           column-gap: 30px;
-  -ms-flex-preferred-size: auto;
-      flex-basis: auto;
+  -webkit-box-flex: unset !important;
+      -ms-flex: unset !important;
+          flex: unset !important;
 }
 
 .footer__logo {
