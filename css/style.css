@@ -888,13 +888,6 @@ input[type=submit] {
   transition: all 0.1s ease-in;
 }
 
-.footer__license-link:hover {
-  color: #a071eb;
-  -webkit-transition: all 0.1s ease-in;
-  -o-transition: all 0.1s ease-in;
-  transition: all 0.1s ease-in;
-}
-
 .footer__license-button {
   font-weight: 500;
   -webkit-transition: all 0.1s ease-in;
@@ -1384,8 +1377,8 @@ input[type=submit] {
 }
 
 .clinic-item__img {
-  min-width: 310px;
-  min-height: 280px;
+  width: 310px;
+  height: 280px;
   border-radius: 20px;
   overflow: hidden;
   -ms-flex-negative: 0;
@@ -3438,6 +3431,13 @@ input[type=submit] {
     -o-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
   }
+
+  .footer__license-link:hover {
+    color: #a071eb;
+    -webkit-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
+  }
 }
 
 @media (min-width: 61.99875em) {
@@ -4291,6 +4291,13 @@ input[type=submit] {
 
   .footer__payment iframe {
     display: none;
+  }
+
+  .footer__license-link:active {
+    color: #a071eb;
+    -webkit-transition: all 0.1s ease-in;
+    -o-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
   }
 
   .main__body {
