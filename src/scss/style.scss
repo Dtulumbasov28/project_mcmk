@@ -155,12 +155,14 @@ body {
 
 // Подключение стилей отдельных секций
 @import "sections/main";
+@import "sections/main-form";
 @import "sections/features";
 @import "sections/promotions";
 @import "sections/clinics";
 @import "sections/article";
 @import "sections/complex-approach";
 @import "sections/text";
+@import "sections/widget";
 @import "sections/services";
 @import "sections/stages";
 @import "sections/numbers";
@@ -178,3 +180,5 @@ body {
 @import "sections/questions-spollers";
 @import "sections/cities";
 @import "sections/contact";
+@import "sections/404";
+@import "sections/contacts";

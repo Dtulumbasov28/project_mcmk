@@ -1,5 +1,12 @@
 .complex-approach {
   background-color: #edeffa;
+
+  @media (max-width: $pc) {
+    padding-bottom: 0;
+    }
+    @media (max-width: $tablet) {
+    padding-bottom: unset;
+    }
   // .complex-approach__container
 
   &__container {
@@ -20,6 +27,13 @@
 
   &__subtitle {
     margin-bottom: 30px;
+
+    @media (max-width: $pc) {
+    margin-bottom: 0;
+    }
+    @media (max-width: $tablet) {
+    margin-bottom: 30px;
+    }
   }
 
   // .complex-approach__content

@@ -69,6 +69,7 @@
 
   &__content-slide {
     position: relative;
+    padding: 1px;
 
     &::before {
       content: url(@img/reviews-quotes.svg);

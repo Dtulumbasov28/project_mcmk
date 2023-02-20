@@ -82,13 +82,7 @@
   // .promo-block__button
 
   &__button {
-    @media (max-width: $tablet) {
-    }
-    @media (max-width: $mobileSmall) {
-      width: 100%;
-      border-radius: 20px;
-      font-size: 24px;
-    }
+
   }
 
   // .promo-block__col-img

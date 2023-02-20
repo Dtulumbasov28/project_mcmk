@@ -1,0 +1,134 @@
+.widget {
+  // .widget__container
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  // .widget__body
+
+  &__body {
+    background-color: #fff;
+
+    box-shadow: 0px 4px 10px 0px #00000029;
+    border-radius: 10px;
+    padding: 50px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 30px;
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+    @media (max-width: $mobileSmall) {
+      padding: 16px;
+    }
+  }
+
+  // .widget__col-text
+
+  &__col-text {
+  }
+
+  // .widget__title
+
+  &__title {
+    margin-bottom: 10px;
+
+    font-size: 48px;
+    font-weight: 700;
+    line-height: math.div(56, 48);
+
+    @media (max-width: $tablet) {
+      font-size: 30px;
+      text-align: center;
+    }
+    @media (max-width: $mobileSmall) {
+      font-size: 24px;
+    }
+  }
+
+  // .widget__subtitle
+
+  &__subtitle {
+    font-weight: 500;
+    color: $mainColorThree;
+    text-align: center;
+  }
+
+  // .widget__col-form
+
+  &__col-form {
+  }
+
+  // .widget__form
+
+  &__form {
+  }
+}
+.widget-form {
+  // .widget-form__input-group
+
+  &__input-group {
+    display: flex;
+
+    @media (max-width: $mobileSmall) {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 10px;
+    }
+  }
+
+  // .widget-form__input
+
+  &__input {
+    border: 1px solid $mainColorElem;
+    border-radius: 10px;
+    padding: 16px 60px 16px 50px;
+    max-width: 300px;
+    outline: none;
+    background: url("@img/placeholder-phone_2.svg") no-repeat;
+    background-size: 30px 30px;
+    background-position: 14px 50%;
+
+    font-size: 20px;
+    font-weight: 500;
+    color: #acacac;
+
+    @media (max-width: $tablet) {
+      font-size: 16px;
+    }
+    @media (max-width: $mobileSmall) {
+      padding: 10px 20px 10px 60px;
+    }
+
+    &::placeholder {
+      color: #acacac;
+    }
+  }
+
+  // .widget-form__button
+
+  &__button {
+    margin-left: -60px;
+    border-radius: 0px 10px 10px 0px;
+    border: 1px solid $mainColorElem;
+    @media (min-width: $tablet) {
+      &:hover {
+        background-color: #fff;
+        outline: unset;
+      }
+    }
+
+    @media (max-width: $mobileSmall) {
+      margin-left: unset;
+      padding: 8px 16px;
+      font-size: 20px;
+      border-radius: 10px;
+    }
+  }
+}

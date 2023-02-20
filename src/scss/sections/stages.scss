@@ -59,7 +59,7 @@
     padding: 0 0 0 48px;
 
     &::before {
-      content: '';
+      content: "";
       background-image: url("@img/stages-decor-line.svg");
       background-repeat: no-repeat;
       background-position: center center;
@@ -72,6 +72,10 @@
       left: 0;
       height: 100%;
       overflow: hidden;
+
+      @media (max-width: $mobile) {
+        background-position: 0 100%;
+      }
     }
 
     @media (max-width: $mobile) {

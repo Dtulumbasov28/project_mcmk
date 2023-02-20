@@ -3,7 +3,7 @@
 .header {
   position: fixed;
   width: 100%;
-  background-color: #ECEFFA;
+  background-color: #eceffa;
   z-index: 10;
 
   padding: 0 0 10px 0;
@@ -209,7 +209,7 @@
       background-color: $mainColorElem;
 
       color: #fff;
-      transform: translateX(-2000px);
+      transform: translateX(-1000px);
       transition: all 0.4s ease-in;
     }
   }
