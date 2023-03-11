@@ -2112,6 +2112,13 @@ input[type=submit] {
 .services__headline {
   font-size: 32px;
   font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 10px;
 }
 
@@ -2900,7 +2907,7 @@ input[type=submit] {
   max-width: 210px;
 }
 
-.dubletext__content span {
+.dubletext__content > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5083,7 +5090,7 @@ input[type=submit] {
             justify-content: center;
   }
 
-  .dubletext__content span {
+  .dubletext__content > div {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
