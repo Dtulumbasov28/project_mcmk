@@ -12,7 +12,7 @@
   // .dubletext__content
 
   &__content {
-    & span {
+    &>div {
       display: flex;
       column-gap: 30px;
 
